@@ -6,6 +6,7 @@ from datetime import datetime
 import models
 make_time = '%Y-%m-%dT%H:%M:%S.%f'
 
+
 class BaseModel:
     def __init__(self, *args, **kwargs):
         if kwargs:
