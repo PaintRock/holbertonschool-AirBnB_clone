@@ -18,11 +18,9 @@ class BaseModel:
         else:
             self.id = str(uuid.uuid4())
             self.created_at = self.updated_at = datetime.now()
-            models.storage.new(self)
 
     def save(self):
         self.updated_at = datetime.now()
-        models.storage.save()
 
     def to_dict(self):
         obj_dict = self.__dict__.copy()
