@@ -31,3 +31,19 @@ class FileStorage:
             full_dict[i] = FileStorage.__objects[i].to_json()
         with open(FileStorage.__file_path, "w", encoding="UTF-8") as f:
             f.write(json.dumps(full_dict))
+
+    def reload(self):
+        """ deserializes the JSON file to __objects """
+        from models.base_model import BaseModel
+
+    reload_dict = {"BaseModel": BaseModel)
+    
+    if os.path.isfile(FileStorage.__file_path):
+            with open(FileStorage.__file_path, "r", encoding="UTF-8") as f:
+                reloaded = json.load(f)
+                for obj, value in reloaded.items():
+                    item_class = reloaded[obj].get("__class__")
+                    if item_class in reload_dict:
+                        cls_func = reload_dict.get(item_class)
+                        FileStorage.__objects[obj] = cls_func(**reloaded[obj])
+    
