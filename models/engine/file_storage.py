@@ -7,6 +7,7 @@ Module for serializing and deserializing instances and JSON files
 import os
 import json
 from datetime import datetime
+from models.base_model import BaseModel
 
 
 class FileStorage:
