@@ -8,7 +8,7 @@ from models.base_model import BaseModel
 class FileStorage:
     """ Defines FileStorage class """
 
-    __file_path = "./file.json"
+    __file_path = "file.json"
     __objects = {}
 
     def all(self):
@@ -37,8 +37,3 @@ class FileStorage:
                     class_name, obj_id = key.split('.')
                     cls = eval(class_name)
                     self.__objects[key] = cls(**value)
-
-        except FileNotFoundError:
-            pass
-        except json.decoder.JSONDecodeError:
-            pass

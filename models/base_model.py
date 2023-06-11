@@ -4,7 +4,7 @@ the other classes"""
 import uuid
 from datetime import datetime
 import models
-make_time = '%Y-%m-%dT%H:%M:%S.%f'
+time_maker = '%Y-%m-%dT%H:%M:%S.%f'
 
 
 class BaseModel:
@@ -14,8 +14,8 @@ class BaseModel:
         for key, value in kwargs.items():
             if key != '__class__':
                 setattr(self, key, value)
-        self.created_at = datetime.strptime(self.created_at, make_time)
-        self.updated_at = datetime.strptime(self.updated_at, make_time)
+        self.created_at = datetime.strptime(self.created_at, time_maker)
+        self.updated_at = datetime.strptime(self.updated_at, time_maker)
     else:
         self.created_at = self.updated_at = datetime.now()
 
