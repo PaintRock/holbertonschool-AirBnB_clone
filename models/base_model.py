@@ -8,7 +8,7 @@ time_maker = '%Y-%m-%dT%H:%M:%S.%f'
 
 
 class BaseModel:
-def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs):
         """
         Instantiate public attributes
         """
