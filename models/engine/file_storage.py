@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """This module contains the class for file storage"""
+import uuid
 import json
 import models
 from models.base_model import BaseModel
@@ -12,8 +13,8 @@ class FileStorage:
     __objects = {}
 
     @classmethod
-    def destroy_all(cls):
-        """Destroys all existing instances of BaseModel and it's children"""
+    def delete_all(cls):
+        """removes all objects"""
         cls.__objects = {}
 
     def all(self):

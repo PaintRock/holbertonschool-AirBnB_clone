@@ -12,16 +12,17 @@ class BaseModel:
         """
         Instantiate public attributes
         """
+        self.id = str(uuid.uuid4))
         if kwargs:
-            for key in kwargs.keys():
-                if key == "created_at":
+            for key value in kwargs.items():
+                if key != ('__class__'):
+                    setattr(self, key, kwargs[key]) 
+                elif key == "created_at":
                     setattr(self, key,
                             datetime.strptime(kwargs[key], time_maker))
                 elif key == "updated_at":
                     setattr(self, key,
                             datetime.strptime(kwargs[key], time_maker))
-                elif key != ('__class__'):
-                    setattr(self, key, kwargs[key])
 
         else:
             self.id = str(uuid.uuid4())
@@ -47,8 +48,7 @@ class BaseModel:
 
     def to_dict(self):
         """
-        Returns a dictionary containing all keys/values of
-        __dict__ of the instance
+        Returns a dictionary containing all keys/values
         """
         class_dict = self.__dict__.copy()
         class_dict["__class__"] = self.__class__.__name__
