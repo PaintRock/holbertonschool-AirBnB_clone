@@ -12,17 +12,16 @@ class BaseModel:
         """
         Instantiate public attributes
         """
-        self.id = str(uuid.uuid4))
         if kwargs:
-            for key value in kwargs.items():
-                if key != ('__class__'):
-                    setattr(self, key, kwargs[key]) 
-                elif key == "created_at":
+            for key in kwargs.keys():
+                if key == "created_at":
                     setattr(self, key,
                             datetime.strptime(kwargs[key], time_maker))
                 elif key == "updated_at":
                     setattr(self, key,
                             datetime.strptime(kwargs[key], time_maker))
+                elif key != ('__class__'):
+                    setattr(self, key, kwargs[key])
 
         else:
             self.id = str(uuid.uuid4())
