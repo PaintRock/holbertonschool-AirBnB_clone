@@ -20,7 +20,7 @@ class FileStorage():
     def destroy_all(cls):
         """Destroys """
         cls.__objects = {}
-    
+
     def all(self):
         """returns the dictionary __objects"""
         return self.__objects
