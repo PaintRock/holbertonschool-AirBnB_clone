@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """
-Class that serializes instances to a JSON file
-    and deserializes JSON file to instances
+Serializes the Class instances to a JSON file.
 """
 import json
 from models.base_model import BaseModel
@@ -14,9 +13,13 @@ from models.user import User
 
 
 class FileStorage():
-    """serializes instance to JSON file"""
+    """serializes to JSON file"""
     __file_path = "file.json"
     __objects = {}
+
+ def destroy_all(cls):
+        """Destroys all existing instances of BaseModel and it's children"""
+        cls.__objects = {}
 
     def all(self):
         """returns the dictionary __objects"""
@@ -26,6 +29,13 @@ class FileStorage():
         """sets in __objects the obj with key <obj class name>.id"""
         key = "{}.{}".format(obj.__class__.__name__, obj.id)
         FileStorage.__objects[key] = obj
+
+def save(self):
+        """serializes __objects to the JSON file (path: __file_path)"""
+        with open(self.__file_path, mode='w', encoding='utf-8') as file:
+            serial_obj = {key: obj.to_dict() for key,
+                          obj in self.__objects.items()}
+            json.dump(serial_obj, file)
 
     def save(self):
         """serializes __objects to the JSON file (path: __file_path)"""
