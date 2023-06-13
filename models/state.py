@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-"""State form BaseModel"""
+"""AirBnB State class from BaseModel"""
 from models.base_model import BaseModel
 
 
 class State(BaseModel):
-    """State class"""
-    name = """
+    """State class from BaseModel"""
+    name = ""
