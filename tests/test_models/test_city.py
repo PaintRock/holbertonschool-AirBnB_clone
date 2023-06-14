@@ -7,13 +7,13 @@ class TestCity(unittest.TestCase):
 
 
     def test_city(self):
-        """Empty test"""
+        """Test to see if city is empty"""
         cityscape = city()
         self.assertIsNotEqual(cityscape.id, None)
         
-    def test_city(self):
-        """Empty test"""
-        statescape = state()
+    def test_state_id(self):
+        """Test to see if state id is empty"""
+        statescape = state_id()
         self.assertIsNotEqual(statescape.id, None)
 
 
