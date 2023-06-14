@@ -20,6 +20,9 @@ class HBNBCommand(cmd.Cmd):
     prompt = '(hbnb) '
     class_list = ["Review", "Place", "State",
                   "User", "BaseModel", "City", "Amenity"]
+    
+    def __init__(self, *args, **kwargs):
+    super().__init__(*args, **kwargs)
 
     def do_quit(self, arg):
         """Quit command to exit the program"""
@@ -35,7 +38,7 @@ class HBNBCommand(cmd.Cmd):
     
     def do_exit(self):
         """Exit system"""
-        sys.exit
+        sys.exit()
         
     def do_create(self, arg):
         """Creates a new instance of BaseModel,
@@ -142,3 +145,6 @@ class HBNBCommand(cmd.Cmd):
         attribute_value = args[3]
         setattr(objects, attribute_name, attribute_value)
         objects.save()
+
+if __name__ == '__main__':
+    HBNBCommand().cmdloop()
