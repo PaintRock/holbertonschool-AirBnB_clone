@@ -8,7 +8,13 @@ class TestCity(unittest.TestCase):
 
 def test_city(self):
     """Empty test"""
-    pass
+    cityscape = city()
+        self.assertIsNotEqual(cityscape.id, None)
+        
+def test_city(self):
+    """Empty test"""
+    statescape = state()
+        self.assertIsNotEqual(statescape.id, None)
 
 if __name__ == '__main__':
     unittest.main()
