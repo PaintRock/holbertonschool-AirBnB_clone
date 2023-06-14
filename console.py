@@ -14,6 +14,7 @@ from models.place import Place
 from models.review import Review
 from models.base_model import BaseModel
 
+
 class HBNBCommand(cmd.Cmd):
     """Command interpreter class"""
 

@@ -3,6 +3,7 @@
 from models.base_model import BaseModel
 import json
 
+
 class State(BaseModel):
     """State class from BaseModel"""
     name = ""
