@@ -23,7 +23,7 @@ class TestReview(unittest.TestCase):
     
     def test___init__(self):
         """method to check if instance intializes"""
-        self.assertIsNotNone(self.place)  
+        self.assertIsNotNone(self.review)  
     
     def test__repr__(self):
         """method to print attributes of dictionary"""
