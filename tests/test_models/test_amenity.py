@@ -23,6 +23,9 @@ class TestAmenity(unittest.TestCase):
     def test___init__(self):
         '''method to check if instance initializes'''
         self.assertIsNotNone(self.amenity) 
-          
+    
+    def test_name(self):
+        self.assertEqual(self.amenity.name, "")
+        
 if __name__ == '__main__':
     unittest.main()
