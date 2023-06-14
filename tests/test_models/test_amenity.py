@@ -42,9 +42,5 @@ class TestAmenity(unittest.TestCase):
         '''method to print attributes of dictionary'''
         self.assertIsNotNone(self.amenity.__str__())
     
-def test_amenity(self):
-    """Empty test"""
-    pass
-
 if __name__ == '__main__':
     unittest.main()

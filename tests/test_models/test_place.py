@@ -25,12 +25,10 @@ class TestPlace(unittest.TestCase):
         """method to check if instance intializes"""
         self.assertIsNotNone(self.place)
 
-if __name__ == '__main__':
-    unittest.main()
-
-def test_place():
+    def test_place():
     """Empty test"""
     pass
-
+        pass
+    
 if __name__ == '__main__':
     unittest.main()
