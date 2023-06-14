@@ -2,6 +2,7 @@
 """
 Serializes the Class instances to a JSON file.
 """
+import os
 import json
 from models.base_model import BaseModel
 from models.amenity import Amenity
@@ -10,16 +11,6 @@ from models.place import Place
 from models.review import Review
 from models.state import State
 from models.user import User
-
-
-#!/usr/bin/python3
-"""
-Module for serializing and deserializing instances and JSON files
-"""
-
-
-import os
-import json
 from datetime import datetime
 
 

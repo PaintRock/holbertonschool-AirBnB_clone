@@ -1,13 +1,18 @@
 #!/usr/bin/python3
 """This module contains the entry point of the command interpreter"""
+import os 
 import cmd
+import sys 
 import json
-from models.base_model import BaseModel
 from models.engine import file_storage
-import os
-import sys
 from models import storage
-
+from models.user import User
+from models.state import State
+from models.city import City
+from models.amenity import Amenity
+from models.place import Place
+from models.review import Review
+from models.base_model import BaseModel
 
 class HBNBCommand(cmd.Cmd):
     """Command interpreter class"""
@@ -106,7 +111,7 @@ class HBNBCommand(cmd.Cmd):
                 if key.split('.')[0] == class_name:
                     objects.append(obj)
 
-        print([str(jbo) for jbo in objects])
+        print([str(obj) for obj in objects])
 
     def do_update(self, arg):
         """Updates an instance based on the class name and id"""
