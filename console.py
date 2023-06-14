@@ -3,7 +3,9 @@
 import cmd
 import json
 from models.base_model import BaseModel
-from models import storage
+from models.engine import file_storage
+import os
+import sys
 
 
 class HBNBCommand(cmd.Cmd):
@@ -15,16 +17,20 @@ class HBNBCommand(cmd.Cmd):
 
     def do_quit(self, arg):
         """Quit command to exit the program"""
-        return SystemExit
+        return self.exit()
 
     def do_EOF(self, arg):
         """EOF command to exit the program"""
-        return SystemExit
+        return self.exit()
 
     def emptyline(self):
         """Do nothing when empty line is entered"""
-        return False
-
+        pass
+    
+    def do_exit(self):
+        """Exit system"""
+        sys.exit
+        
     def do_create(self, arg):
         """Creates a new instance of BaseModel,
             saves to JSON file and prints id"""
