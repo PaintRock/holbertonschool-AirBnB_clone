@@ -41,8 +41,8 @@ class BaseModel():
 
     def __str__(self):
         """String representation function"""
-        im_string = self.__class__.__name__
-        return ("[{}] ({}) {}".format(im_string, self.id, self.__dict__))
+        ima_string = self.__class__.__name__
+        return "[{}] ({}) {}".format(ima_string, self.id, self.__dict__)
 
     def to_json(self):
         """Return a JSON-serializable representation of the object"""
