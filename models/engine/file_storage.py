@@ -60,6 +60,6 @@ class FileStorage:
                         cls_func = reload_dict.get(item_class)
                         FileStorage.__objects[obj] = cls_func(**reloaded[obj])
 
-    def delete_all(self):
+    def destroy_all(self):
         """ deletes all"""
         FileStorage.__objects.clear()
