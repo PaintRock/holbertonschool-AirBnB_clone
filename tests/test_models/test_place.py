@@ -5,6 +5,7 @@ import os
 from models.base_model import BaseModel
 import json
 
+
 class TestPlace(unittest.TestCase):
     """TestPlace class documentation"""
 
