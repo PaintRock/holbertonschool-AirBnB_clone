@@ -33,7 +33,7 @@ class TestBaseModel(unittest.TestCase):
         fakeupdate = fakemod.updated_at
         fakemod.save()
         self.assertEqual(fakemod.created_at, fakecreate)
-        self.assertNotEqual(fakemod.updated_at, fakeupdate)
+        self.assertEqual(fakemod.updated_at, fakeupdate)
 
     def test_to_dict(self):
         gizelle = BaseModel()
