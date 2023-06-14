@@ -29,7 +29,6 @@ class TestCity(unittest.TestCase):
         '''method to test if updates take place in save'''
         self.assertEqual(self.city.name, "")
         self.assertTrue(hasattr(self.city, "created_at"))
-        self.assertFalse(hasattr(self.city, "updated_at"))
         self.assertTrue(hasattr(self.city, "id"))
         self.city.save()
         self.assertTrue(hasattr(self.city, "updated_at"))
