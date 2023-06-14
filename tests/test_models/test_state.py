@@ -5,7 +5,7 @@ from models.base_model import BaseModel
 from models.state import State
 import json
 
-class TestAmenity(unittest.TestCase):
+class TestState(unittest.TestCase):
 
     def setUp(self):
         '''method to set up instance of State/json file'''
