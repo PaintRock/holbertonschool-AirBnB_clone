@@ -15,15 +15,15 @@ class HBNBCommand(cmd.Cmd):
 
     def do_quit(self, arg):
         """Quit command to exit the program"""
-        return True
+        return SystemExit
 
     def do_EOF(self, arg):
         """EOF command to exit the program"""
-        return True
+        return SystemExit
 
     def emptyline(self):
         """Do nothing when empty line is entered"""
-        pass
+        return False
 
     def do_create(self, arg):
         """Creates a new instance of BaseModel,
