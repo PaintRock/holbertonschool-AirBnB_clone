@@ -23,7 +23,7 @@ class TestUser(unittest.TestCase):
 
     def test___init__(self):
         """method to check if instance intializes"""
-        self.assertIsNotNone(self.User)
+        self.assertIsNotNone(self.user)
 
 if __name__ == '__main__':
     unittest.main()
