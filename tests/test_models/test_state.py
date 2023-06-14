@@ -23,7 +23,7 @@ class TestState(unittest.TestCase):
         '''method to check if instance initializes'''
         self.assertIsNotNone(self.state)
         
-     def test_attributes(self):
+    def test_attributes(self):
         '''method to test if updates take place in save'''
         self.assertEqual(self.state.name, "")
         self.assertTrue(hasattr(self.state, "created_at"))
