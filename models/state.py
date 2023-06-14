@@ -6,6 +6,7 @@ import json
 class State(BaseModel):
     """State class from BaseModel"""
     name = ""
+
     def to_json(self):
         """Return a JSON-serializable representation of the object"""
         json_dict = self.to_dict()
