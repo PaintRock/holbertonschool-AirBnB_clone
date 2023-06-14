@@ -14,17 +14,20 @@ class TestReview(unittest.TestCase):
         self.review = Review()
 
     def tearDown(self):
-        '''method to tear down instance of Review/json file'''
+        """method to tear down instance of Review/json file"""
         if os.path.exists("file.json"):
             try:
+                try:
+                os.remove("file.json")
+            except:
+                pass
+    def test___init__(self):
+        """method to check if instance intializes"""
+        self.assertIsNotNone(self.place)  
     
     def test__repr__(self):
-        '''method to print attributes of dictionary'''
+        """method to print attributes of dictionary"""
         self.assertIsNotNone(self.review.__str__())  
-
-    def test_review(self):
-        """Empty test"""
-        pass
 
 if __name__ == '__main__':
     unittest.main()
