@@ -8,8 +8,15 @@
 The command interpreter module to Manage AirBnB objects.
 
 ## Project Notes
-### Environment
+<details><summary> Environment </summary>
+
+  ### Environment
 Files interpreted/run on Ubuntu 14.04 LTS with Python 3
+
+</details>
+
+<details><summary> Style </summary>
+
 ### Style
 All code is written in accordance with Pep8 https://www.python.org/dev/peps/pep-0008/
 
