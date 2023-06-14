@@ -17,7 +17,7 @@ from datetime import datetime
 class FileStorage:
     """ defines FileStorage class """
 
-    __file_path = "./file.json"
+    __file_path = "file.json"
     __objects = {}
 
     def all(self):
