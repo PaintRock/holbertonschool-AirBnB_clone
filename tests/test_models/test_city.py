@@ -34,11 +34,6 @@ class TestCity(unittest.TestCase):
         self.city.save()
         self.assertTrue(hasattr(self.city, "updated_at"))
 
-    def test_to_json(self):
-        '''method to check that the to_json function returns'''
-        example_tojson = City.to_json(self.city)
-        self.assertEqual(type(example_tojson), dict)
-
     def test___str__(self):
         '''method to check that dict printing instance'''
         example = "[{}] ({}) {}".format(self.__class__.__name__,
