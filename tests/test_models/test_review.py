@@ -4,6 +4,11 @@ from models.review import Review
 
 class TestReview(unittest.TestCase):
     """TestReview class documentation"""
+    
+    
+def test_review(self):
+    """Empty test"""
+    pass
 
 
 
