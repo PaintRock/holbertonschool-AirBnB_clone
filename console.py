@@ -6,6 +6,7 @@ from models.base_model import BaseModel
 from models.engine import file_storage
 import os
 import sys
+from models import storage
 
 
 class HBNBCommand(cmd.Cmd):
