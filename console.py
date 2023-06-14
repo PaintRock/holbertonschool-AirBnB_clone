@@ -3,33 +3,18 @@
 import cmd
 import json
 from models.base_model import BaseModel
-from models.engine.file_storage import FileStorage
+from models.engine import file_storage
 import os
 import sys
-from datetime import datetime
-from models.base_model import BaseModel
-from models.user import User
-from models.state import State
-from models.city import City
-from models.amenity import Amenity
-from models.place import Place
-from models.review import Review
-import unittest
-class_list = {
-    "BaseModel":BaseModel,
-    "User":User,
-    "City":City,
-    "Place":Place,
-    "Review":Review,
-    "Amenity":Amenity,
-    "User":User
-    }
 
 
 class HBNBCommand(cmd.Cmd):
     """Command interpreter class"""
+
     prompt = '(hbnb) '
-    
+    class_list = ["Review", "Place", "State",
+                  "User", "BaseModel", "City", "Amenity"]
+
     def do_quit(self, arg):
         """Quit command to exit the program"""
         return self.exit()
@@ -151,6 +136,3 @@ class HBNBCommand(cmd.Cmd):
         attribute_value = args[3]
         setattr(objects, attribute_name, attribute_value)
         objects.save()
-        
-if __name__ == '__main__':
-    unittest.main()
