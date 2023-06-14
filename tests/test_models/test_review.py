@@ -17,10 +17,10 @@ class TestReview(unittest.TestCase):
         """method to tear down instance of Review/json file"""
         if os.path.exists("file.json"):
             try:
-                try:
                 os.remove("file.json")
             except:
                 pass
+    
     def test___init__(self):
         """method to check if instance intializes"""
         self.assertIsNotNone(self.place)  
