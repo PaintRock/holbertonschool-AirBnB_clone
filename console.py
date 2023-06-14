@@ -3,7 +3,7 @@
 import cmd
 import json
 from models.base_model import BaseModel
-from models.engine import file_storage
+from models.engine.file_storage import FileStorage
 import os
 import sys
 from datetime import datetime
@@ -19,6 +19,13 @@ from models.review import Review
 
 class HBNBCommand(cmd.Cmd):
     """Command interpreter class"""
+        my_class = {"BaseModel":BaseModel,
+                    "User":User,
+                    "City":City,
+                    "Place":Place,
+                    "Review":Review,
+                    "Amenity":Amenity,
+                    "User":User}
 
     prompt = '(hbnb) '
     class_list = ["Review", "Place", "State",
