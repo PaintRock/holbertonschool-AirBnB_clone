@@ -1,6 +1,9 @@
 """test_review module"""
 import unittest
 from models.review import Review
+import os
+from models.base_model import BaseModel
+import json
 
 class TestReview(unittest.TestCase):
     """TestReview class documentation"""

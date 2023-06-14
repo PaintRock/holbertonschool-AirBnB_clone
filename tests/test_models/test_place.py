@@ -1,6 +1,9 @@
 """test_place module"""
 import unittest
 from models.place import Place
+import os
+from models.base_model import BaseModel
+import json
 
 class TestPlace(unittest.TestCase):
     """TestPlace class documentation"""

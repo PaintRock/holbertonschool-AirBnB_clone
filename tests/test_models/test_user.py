@@ -3,7 +3,7 @@ import unittest
 import os
 from models.base_model import BaseModel
 from models.user import User
-
+import json
 
 class TestUser(unittest.TestCase):
     """TestUser class documentation"""

@@ -3,7 +3,7 @@ import unittest
 import os
 from models.base_model import BaseModel
 from models.state import State
-
+import json
 
 class TestAmenity(unittest.TestCase):
 

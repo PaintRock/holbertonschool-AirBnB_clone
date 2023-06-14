@@ -3,6 +3,7 @@ import unittest
 import os
 from models.base_model import BaseModel
 from models.city import City
+import json
 
 '''test module for City class'''
 
