@@ -23,11 +23,16 @@ class TestReview(unittest.TestCase):
     
     def test___init__(self):
         """method to check if instance intializes"""
-        self.assertIsNotNone(self.review)  
+        self.assertIsNotNone(self.review)
     
     def test__repr__(self):
         """method to print attributes of dictionary"""
-        self.assertIsNotNone(self.review.__str__())  
+        self.assertIsNotNone(self.review.__str__())
+
+    def test_attr(self)
+        self.assertEqual(self.review.user_id, "")
+        self.assertEqual(self.review.place_id, "")
+        self.assertEqual(self.review.text, "")
 
 if __name__ == '__main__':
     unittest.main()
