@@ -24,7 +24,7 @@ class TestAmenity(unittest.TestCase):
         '''method to check if instance initializes'''
         self.assertIsNotNone(self.amenity) 
         
-     def test_attributes(self):
+    def test_attributes(self):
         '''method to test if updates take place in save'''
         self.assertEqual(self.amenity.name, "")
         self.assertTrue(hasattr(self.amenity, "created_at"))
