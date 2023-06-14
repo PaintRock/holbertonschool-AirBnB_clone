@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """This module contains the entry point of the command interpreter"""
-import os 
+import os
 import cmd
-import sys 
+import sys
 import json
 from models.engine import file_storage
 from models import storage
@@ -20,7 +20,7 @@ class HBNBCommand(cmd.Cmd):
     prompt = '(hbnb) '
     class_list = ["Review", "Place", "State",
                   "User", "BaseModel", "City", "Amenity"]
-    
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
@@ -35,11 +35,11 @@ class HBNBCommand(cmd.Cmd):
     def emptyline(self):
         """Do nothing when empty line is entered"""
         pass
-    
+
     def do_exit(self):
         """Exit system"""
         sys.exit()
-        
+
     def do_create(self, arg):
         """Creates a new instance of BaseModel,
             saves to JSON file and prints id"""

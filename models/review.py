@@ -9,7 +9,7 @@ class Review(BaseModel):
     place_id = ""
     user_id = ""
     text = ""
-    
+
     def to_json(self):
         """Return a JSON-serializable representation of the object"""
         json_dict = self.to_dict()

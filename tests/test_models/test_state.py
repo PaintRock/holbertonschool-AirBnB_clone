@@ -31,6 +31,7 @@ class TestState(unittest.TestCase):
         self.state.save()
         self.assertTrue(hasattr(self.state, "updated_at"))
 
+    
     def test___str__(self):
         '''method to check that dict printing instance'''
         example = "[{}] ({}) {}".format(self.__class__.__name__,
