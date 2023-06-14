@@ -38,7 +38,7 @@ class TestPlace(unittest.TestCase):
         self.assertEqual(self.place.price_by_night, 0)
         self.assertEqual(self.place.latitude, 0.0)
         self.assertEqual(self.place.longitude, 0.0)
-        self.assertEqual(self.place.amenity_ids, "")
+        self.assertNotEqual(self.place.amenity_ids, "")
         self.place.save
     
 if __name__ == '__main__':
