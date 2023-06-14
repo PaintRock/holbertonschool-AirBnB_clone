@@ -22,7 +22,7 @@ class HBNBCommand(cmd.Cmd):
                   "User", "BaseModel", "City", "Amenity"]
     
     def __init__(self, *args, **kwargs):
-    super().__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
 
     def do_quit(self, arg):
         """Quit command to exit the program"""
