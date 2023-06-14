@@ -5,7 +5,7 @@ from models.user import User
 class TestUser(unittest.TestCase):
     """TestUser class documentation"""
 
-def test_name(self)
+def test_name(self):
     """Empty test"""
     pass
 
