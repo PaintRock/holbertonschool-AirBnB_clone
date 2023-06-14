@@ -8,8 +8,7 @@ class TestState(unittest.TestCase):
 
     def test_state(self):
         """Empty test"""
-        statename = state()
-        self.assertIsNotEqual(statename.id, None)
+        self.assertIsNone(self.state)
         
 if __name__ == '__main__':
     unittest.main()

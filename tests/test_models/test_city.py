@@ -50,4 +50,4 @@ class TestCity(unittest.TestCase):
         self.assertIsNotNone(self.city.__str__())
 
 if __name__ == "__main__":
-    main())
+    main()
