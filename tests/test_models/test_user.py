@@ -24,7 +24,14 @@ class TestUser(unittest.TestCase):
     def test___init__(self):
         """method to check if instance intializes"""
         self.assertIsNotNone(self.user)
-
+        
+    def test_attributes(self):
+        '''method to test if updates take place in save'''
+        self.assertEqual(self.user.email, "")
+        self.assertEqual(self.user.password, "")
+        self.assertTrue(self.user.first_name, "")
+        self.assertTrue(self.user.last_name, "")
+        
 if __name__ == '__main__':
     unittest.main()
   
