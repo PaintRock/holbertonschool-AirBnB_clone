@@ -25,7 +25,7 @@ class TestReview(unittest.TestCase):
         '''method to check if instance initializes'''
         self.assertIsNotNone(self.review) 
         
-def test_attributes(self):
+    def test_attributes(self):
         '''method to test if updates take place in save'''
         self.assertEqual(self.review.name, "")
         self.assertTrue(hasattr(self.review, "created_at"))
@@ -43,9 +43,9 @@ def test_attributes(self):
         '''method to print attributes of dictionary'''
         self.assertIsNotNone(self.review.__str__())  
     
-def test_review(self):
-    """Empty test"""
-    pass
+    def test_review(self):
+        """Empty test"""
+        pass
 
 if __name__ == '__main__':
     unittest.main()
