@@ -28,7 +28,7 @@ class TestState(unittest.TestCase):
         self.assertEqual(self.state.name, "")
         self.assertTrue(hasattr(self.state, "created_at"))
         self.assertTrue(hasattr(self.state, "id"))
-        self.city.save()
+        self.state.save()
         self.assertTrue(hasattr(self.state, "updated_at"))
 
     def test___str__(self):
