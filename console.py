@@ -14,22 +14,19 @@ from models.city import City
 from models.amenity import Amenity
 from models.place import Place
 from models.review import Review
+ class_list = {"BaseModel":BaseModel,
+                "User":User,
+                "City":City,
+                "Place":Place,
+                "Review":Review,
+                "Amenity":Amenity,
+                "User":User}
 
 
 class HBNBCommand(cmd.Cmd):
     """Command interpreter class"""
-        my_class = {"BaseModel":BaseModel,
-                    "User":User,
-                    "City":City,
-                    "Place":Place,
-                    "Review":Review,
-                    "Amenity":Amenity,
-                    "User":User}
-
     prompt = '(hbnb) '
-    class_list = ["Review", "Place", "State",
-                  "User", "BaseModel", "City", "Amenity"]
-
+    
     def do_quit(self, arg):
         """Quit command to exit the program"""
         return self.exit()
@@ -151,3 +148,6 @@ class HBNBCommand(cmd.Cmd):
         attribute_value = args[3]
         setattr(objects, attribute_name, attribute_value)
         objects.save()
+        
+if __name__ == '__main__':
+    unittest.main()
