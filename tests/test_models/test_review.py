@@ -29,7 +29,7 @@ class TestReview(unittest.TestCase):
         """method to print attributes of dictionary"""
         self.assertIsNotNone(self.review.__str__())
 
-    def test_attr(self)
+    def test_attr(self):
         self.assertEqual(self.review.user_id, "")
         self.assertEqual(self.review.place_id, "")
         self.assertEqual(self.review.text, "")

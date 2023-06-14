@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Review from BaseModel"""
 from models.base_model import BaseModel
+import json
 
 
 class Review(BaseModel):
