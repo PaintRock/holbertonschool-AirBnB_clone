@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """User module"""
 from models.base_model import BaseModel
+import json
 
 
 class User(BaseModel):
