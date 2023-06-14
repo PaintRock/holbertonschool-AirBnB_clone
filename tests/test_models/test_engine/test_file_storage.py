@@ -57,6 +57,5 @@ class TestFileStorage(unittest.TestCase):
         self.storage.reload()
         self.assertIn(f"{self.model.__class__.__name__}.{self.model.id}", self.storage.all().keys())
 
-
 if __name__ == '__main__':
     unittest.main()
