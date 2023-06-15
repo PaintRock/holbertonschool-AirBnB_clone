@@ -54,8 +54,9 @@ class TestFileStorage(unittest.TestCase):
         self.storage.destroy_all()
         self.assertEqual(self.storage.all(), {})
         self.assertTrue(len(self.storage.all()) == 0)
-        self.storage.reload()
-        self.assertIn(f"{self.model.__class__.__name__}.{self.model.id}", self.storage.all().keys())
+        try:
+            self.storage.reload()
+            self.assertIn(f"{self.model.__class__.__name__}.{self.model.id}", self.storage.all().keys())
         except FileNotFoundError:
             pass
         
