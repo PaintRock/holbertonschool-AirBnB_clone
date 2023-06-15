@@ -45,7 +45,7 @@ class TestBaseModel(unittest.TestCase):
 
     def test__str__(self):
         """Test the string representation of BaseModel instance"""
-        review = Review()
+        review = BaseModel()
         review.id = "123"
         review.user_id = "456"
         review.place_id = "789"
