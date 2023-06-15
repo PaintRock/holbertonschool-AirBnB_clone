@@ -3,7 +3,6 @@ import unittest
 import uuid
 from datetime import datetime
 from models.base_model import BaseModel
-from models.review import Review
 
 class TestBaseModel(unittest.TestCase):
     """TestBase class documentation"""
@@ -44,15 +43,16 @@ class TestBaseModel(unittest.TestCase):
         self.assertIsInstance(gizelle_dict["created_at"], str)
 
     def test__str__(self):
-        """Test the string representation of BaseModel instance"""
-        model = BaseModel()
-        model.id = "123"
-        model.user_id = "456"
-        model.place_id = "789"
-        model.text = "Test review"
-
-        expected_str = "[BaseModel] (123) {'id': '123', 'user_id': '456', 'place_id': '789', 'text': 'Test review'}"
-        self.assertEqual(str(model), expected_str)
+    """Test the string representation of BaseModel instance"""
+    review = Review()
+    review.id = "123"
+    review.user_id = "456"
+    review.place_id = "789"
+    review.text = "Test review"
+    
+    expected_str = "[Review] (123) {'id': '123', 'user_id': '456'," \
+        "'place_id': '789', 'text': 'Test review'}"
+    self.assertEqual(str(review), expected_str)
 
 if __name__ == '__main__':
     unittest.main()
