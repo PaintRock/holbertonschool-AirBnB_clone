@@ -52,7 +52,7 @@ class TestBaseModel(unittest.TestCase):
         review.text = "Test review"
     
         expected_str = "[Review] (123) {'id': '123', 'user_id': '456'," \
-            "'place_id': '789', 'text': 'Test review'}"
+        "'place_id': '789', 'text': 'Test review'}"
         self.assertEqual(str(review), expected_str)
 
 if __name__ == '__main__':
