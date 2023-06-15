@@ -29,7 +29,7 @@ class TestUser(unittest.TestCase):
         '''method to test if updates take place in save'''
         self.assertEqual(self.user.email, "")
         self.assertEqual(self.user.password, "")
-        self.assertTrue(self.user.first_name, "")
+        self.assertIsNotTrue(self.user.first_name, "")
         self.assertTrue(self.user.last_name, "")
         
 if __name__ == '__main__':
