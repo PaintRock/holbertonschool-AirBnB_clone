@@ -14,7 +14,7 @@ header.logo {
     border-bottom: 1px solid #CCCCCC;
     display: flex;
     align-items: center;
-    background-image: url('../images/favicon.png');
+    background-image: url('../images/logo.png');
     background-repeat: no-repeat;
     background-position: left center; /* Aligns the background image to the left and vertically centered */
     background-size: contain; /* Adjust this as needed */
